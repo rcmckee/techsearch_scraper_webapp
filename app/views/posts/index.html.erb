@@ -1,9 +1,7 @@
 <div class="container">
   <div class="filter">
     <%= form_tag posts_path, method: :get do %>
-      <%= label_tag :details %>
-      <%= text_field_tag :details %>
- 
+      <%= text_field_tag :search, params[:search] %>
       <%= submit_tag "Search", name: nil %>
     <% end %>
   </div>
@@ -32,5 +30,5 @@
 
   <br>
 
-  <%= link_to 'New Post', new_post_path %>
+
 </div>

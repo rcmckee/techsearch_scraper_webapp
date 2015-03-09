@@ -3,11 +3,16 @@ class PostsController < ApplicationController
 
   def home
   end
-  
+
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all.paginate(:page => params[:page], :per_page => 30)
+    @search = Post.search do
+      fulltext params[:search] #passing the search parameter into the block (giving the block the information the user types into the search bar)
+    end
+    @posts = @search.results
+  #to show all posts; like "browse all" refer to what I had before showing search results
+  # @posts = Post.all.pagination and (some limitation to 30 results per page)
   end
 
   # GET /posts/1
@@ -16,13 +21,13 @@ class PostsController < ApplicationController
   end
 
   # GET /posts/new
-  def new
-    @post = Post.new
-  end
+  # def new
+  #   @post = Post.new
+  # end
 
   # GET /posts/1/edit
-  def edit
-  end
+  # def edit
+  # end
 
   # POST /posts
   # POST /posts.json

@@ -3,6 +3,12 @@
     <div class="center">
 	    <h1>Tech Search</h1>
 	    <h2>The easiest way to find licensable technology from University and Federal Research Laboratories</h2>
+	    <div class="center">
+	      	<%= form_tag posts_path, method: :get do %>
+					<%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Search..." %>
+		      	<%= submit_tag "Launch!", name: nil, class: "btn btn-default" %>
+		    <% end %>
+		</div>
   	</div>
   </div>
 </div>
