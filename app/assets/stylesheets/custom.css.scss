@@ -6,7 +6,7 @@
 }
 
 .jumbotron {
-  background-image: image-url('./shuttle.jpg');
+  background-image: asset-data-url("shuttle.jpg");
   height: 800px;
   margin: 0px;
   background-position: center;
@@ -21,4 +21,3 @@
   }
 
 }
-
