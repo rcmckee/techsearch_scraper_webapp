@@ -1,4 +1,9 @@
 == README
+This webapp works well locally and on heroku, except the search doesn't work
+because heroku uses a postgres database and the standard ruby on rails app starts
+with a MySQL database. So I'm going to rebuild this from the ground up starting
+ with a ruby on rails app initialized with a postgres database. Then I will try
+ some new search methods to get the full text search working on heroku. 
 
 This README would normally document whatever steps are necessary to get the
 application up and running.

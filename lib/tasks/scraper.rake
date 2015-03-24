@@ -4,9 +4,9 @@ namespace :scraper do
   desc "scrape data from UT OTC"
   task scrape: :environment do
 	# encoding: utf-8
-	
+
 	require 'open-uri'
-	
+
 	require 'Nokogiri'
 
 

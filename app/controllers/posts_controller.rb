@@ -12,7 +12,7 @@ class PostsController < ApplicationController
     end
     @posts = @search.results
   #to show all posts; like "browse all" refer to what I had before showing search results
-  # @posts = Post.all.pagination and (some limitation to 30 results per page)
+  # @posts = Post.all.paginate(:page => params[:page], :per_page => 30)
   end
 
   # GET /posts/1

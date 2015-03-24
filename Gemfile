@@ -37,13 +37,9 @@ gem 'sunspot_solr'
 gem 'progress_bar'
 gem 'aws-sdk', '< 2.0'
 gem 'paperclip', '~> 4.2'
-
-group :development, :test do
-     gem 'sqlite3'
-end
+gem 'pg'
 
 group :production do
-     gem 'pg'
      gem 'rails_12factor'
 end
 
@@ -59,4 +55,3 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
